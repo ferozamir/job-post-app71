@@ -1,0 +1,6 @@
+module Pods_JobPostApp71_JobPostApp71Tests {
+  umbrella header "Pods-JobPostApp71-JobPostApp71Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_JobPostApp71 {
+  umbrella header "Pods-JobPostApp71-umbrella.h"
+
+  export *
+  module * { export * }
+}
