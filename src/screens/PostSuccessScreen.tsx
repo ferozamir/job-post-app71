@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         height: 56,
         paddingHorizontal: 24,
         paddingVertical: 16,
-        marginHorizontal: 'auto',
+        alignSelf: 'center',
         marginTop: 24,
     },
     buttonText: {

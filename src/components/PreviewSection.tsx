@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, Alert, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, Alert, Dimensions, Platform } from 'react-native';
 import colors from '../colors';
 import CustomText from './CustomText';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -41,7 +41,7 @@ const PreviewSection: React.FC<Props> = ({ setCurrentStep, jobDetails }) => {
 
     const handlePayment = async () => {
 
-        const API_URL = `http://10.0.2.2:3000/jobs`; // You can replace your own API_URL to Test
+        const API_URL = Platform.OS === 'ios' ? `http://localhost:3000/jobs` : `http://10.0.2.2:3000/jobs`; // You can replace your own API_URL to Test
 
         const bodyData = {
             ...jobDetails,

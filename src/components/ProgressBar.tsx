@@ -47,10 +47,12 @@ const styles = StyleSheet.create({
         width: '86%',
         height: 70,
         padding: 16,
-        margin: 'auto'
+        // margin: 'auto'
+        marginLeft: '7%',
     },
     stepContainer: {
         alignItems: 'center',
+        zIndex: 10
     },
     circle: {
         width: 24,
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        zIndex: 10
+        zIndex: 10,
     },
     completedCircle: {
         backgroundColor: '#7A7C85',
@@ -73,6 +75,7 @@ const styles = StyleSheet.create({
         width: 34,
         height: 24,
         borderColor: 'transparent',
+        position: 'absolute',
     },
     lineContainer: {
         flex: 1,

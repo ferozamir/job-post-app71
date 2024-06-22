@@ -109,7 +109,6 @@ const JobDetailsSection: React.FC<Props> = ({ setCurrentStep, setJobDetails }) =
                     <Chip
                         key={index}
                         style={styles.chip}
-                        children={skill}
                         onClose={() => setSkillsList(skillsList.filter((s, i) => i !== index))}
                     >
                         {skill}
@@ -160,6 +159,7 @@ const styles = StyleSheet.create({
         marginBottom: 16,
         backgroundColor: colors.background,
         paddingHorizontal: 14,
+        paddingVertical: 12,
         borderRadius: 8,
         fontSize: 14,
         fontFamily: 'Poppins-Regular'
@@ -167,7 +167,8 @@ const styles = StyleSheet.create({
     textArea: {
         height: 307,
         textAlignVertical: 'top',
-        paddingVertical: 16,
+        paddingTop: 10,
+        paddingBottom: 10,
         fontSize: 14,
         fontFamily: 'Poppins-Regular'
     },
@@ -189,6 +190,7 @@ const styles = StyleSheet.create({
         marginBottom: 0,
         backgroundColor: colors.background,
         paddingHorizontal: 14,
+        paddingVertical: 12,
         borderRadius: 8,
         fontFamily: 'Poppins-Regular'
     },
@@ -196,9 +198,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         backgroundColor: colors.primary,
         paddingHorizontal: 10,
+        paddingVertical: 3,
         borderRadius: 8,
         right: 7,
-        top: 6
+        top: "9%"
     },
     skillsChips: {
         flexDirection: 'row',

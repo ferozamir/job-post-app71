@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Alert, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Alert, Platform, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native'
 import JobPostCard from '../components/JobPostCard';
 import colors from '../colors';
 import CustomText from '../components/CustomText';
@@ -19,7 +19,7 @@ const ManageJobsScreen = () => {
 
             setIsLoading(true);
 
-            const API_URL = `http://10.0.2.2:3000/jobs`; // You can replace your own API_URL to Test
+            const API_URL = Platform.OS === 'ios' ? `http://localhost:3000/jobs` : `http://10.0.2.2:3000/jobs`; // You can replace your own API_URL to Test
 
             try {
                 const response = await fetch(API_URL, {
@@ -78,14 +78,17 @@ const ManageJobsScreen = () => {
 const styles = StyleSheet.create({
     buttonContainer: {
         width: '100%',
-        marginVertical: 30
+        marginVertical: 30,
+        marginTop: 30
     },
     button: {
         backgroundColor: colors.primary,
         paddingHorizontal: 24,
         paddingVertical: 10,
         borderRadius: 8,
-        marginHorizontal: 'auto'
+        width: '92%',
+        marginLeft: '4%',
+        marginTop: 20
     },
     buttonText: {
         fontSize: 14,
